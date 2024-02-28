@@ -11,32 +11,28 @@
 <body>
     <!--Header-->
 
-    <div class="container headerCss">
-        <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-2 mb-1">
-          <div class="col-md-3 mb-2 mb-md-0">
-            <a href="/" class="d-inline-flex link-body-emphasis text-decoration-none">
-                <svg id="logo-72" width="40" height="32" viewBox="0 0 53 44" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M23.2997 0L52.0461 28.6301V44H38.6311V34.1553L17.7522 13.3607L13.415 13.3607L13.415 44H0L0 0L23.2997 0ZM38.6311 15.2694V0L52.0461 0V15.2694L38.6311 15.2694Z" class="ccustom" fill="#cccccc"></path> </svg>
-            </a>
-          </div>
-    
-          <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-            <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
-            <li><a href="#" class="nav-link px-2">Features</a></li>
-            <li><a href="#" class="nav-link px-2">Pricing</a></li>
-            <li><a href="#" class="nav-link px-2">FAQs</a></li>
-            <li><a href="#" class="nav-link px-2">About</a></li>
-          </ul>
-    
-          <div class="col-md-3 text-end"> <!--Buttons-->
-            <button type="button" class="btn btn-outline-primary me-2">Login</button>
-            <button type="button" class="btn btn-primary">Sign-up</button>
-          </div>
-        </header>
+    <div class="container">
+      <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+        <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+          <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+          <span class="fs-4">Simple header</span>
+        </a>
+  
+        <ul class="nav nav-pills">
+          <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#" class="btn btn-success  me-2" aria-current="page">Sign Up</a></li>  
+          <li class="nav-item"><a href="#" class="btn btn-outline-primary me-2" aria-current="page">Log In</a></li>
+        </ul>
+      </header>
     </div>
 
     
     <!--Carousels-->
-    <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel" data-bs-theme="dark">
+    <!-- <div id="myCarousel" class="carousel slide mb-6" data-bs-ride="carousel" data-bs-theme="dark">
         <div class="carousel-indicators">
           <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-label="Slide 1" aria-current="true"></button>
           <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
@@ -83,7 +79,25 @@
           <span class="visually-hidden">Next</span>
         </button>
       </div>
-      </div>
+      </div> -->
+      <div class="container my-5">
+        <div class="p-5 text-center bg-body-tertiary rounded-3">
+            <svg class="bi mt-4 mb-3" style="color: var(--bs-indigo);" width="100" height="100"><path d="M23.2997 0L52.0461 28.6301V44H38.6311V34.1553L17.7522 13.3607L13.415 13.3607L13.415 44H0L0 0L23.2997 0ZM38.6311 15.2694V0L52.0461 0V15.2694L38.6311 15.2694Z" class="ccustom" fill="#cccccc"></path></svg>
+            <h1 class="text-body-emphasis">Jumbotron with icon</h1>
+            <p class="col-lg-8 mx-auto fs-5 text-muted">
+            This is a custom jumbotron featuring an SVG image at the top, some longer text that wraps early thanks to a responsive <code>.col-*</code> class, and a customized call to action.
+            </p>
+            <div class="d-inline-flex gap-2 mb-5">
+            <button class="d-inline-flex align-items-center btn btn-primary btn-lg px-4 rounded-pill" type="button">
+                Call to action
+                <svg class="bi ms-2" width="24" height="24"><use xlink:href="#arrow-right-short"></use></svg>
+            </button>
+            <button class="btn btn-outline-secondary btn-lg px-4 rounded-pill" type="button">
+                Secondary link
+            </button>
+            </div>
+        </div>
+        </div>
 
       <!--Cards to add image features etc.-->
       <div class="container px-4 py-5" id="custom-cards">
@@ -157,24 +171,7 @@
 
       <!--<div class="b-example-divider"></div>-->
       <!--Jumbotron-->
-      <div class="container my-5">
-        <div class="p-5 text-center bg-body-tertiary rounded-3">
-            <svg class="bi mt-4 mb-3" style="color: var(--bs-indigo);" width="100" height="100"><path d="M23.2997 0L52.0461 28.6301V44H38.6311V34.1553L17.7522 13.3607L13.415 13.3607L13.415 44H0L0 0L23.2997 0ZM38.6311 15.2694V0L52.0461 0V15.2694L38.6311 15.2694Z" class="ccustom" fill="#cccccc"></path></svg>
-            <h1 class="text-body-emphasis">Jumbotron with icon</h1>
-            <p class="col-lg-8 mx-auto fs-5 text-muted">
-            This is a custom jumbotron featuring an SVG image at the top, some longer text that wraps early thanks to a responsive <code>.col-*</code> class, and a customized call to action.
-            </p>
-            <div class="d-inline-flex gap-2 mb-5">
-            <button class="d-inline-flex align-items-center btn btn-primary btn-lg px-4 rounded-pill" type="button">
-                Call to action
-                <svg class="bi ms-2" width="24" height="24"><use xlink:href="#arrow-right-short"></use></svg>
-            </button>
-            <button class="btn btn-outline-secondary btn-lg px-4 rounded-pill" type="button">
-                Secondary link
-            </button>
-            </div>
-        </div>
-        </div>
+
 
 
         <!--footer-->
