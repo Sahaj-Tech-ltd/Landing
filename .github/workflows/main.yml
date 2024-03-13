@@ -11,6 +11,6 @@ jobs:
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
-        server: s10.asurahosting.com:2222
+        server: s10.asurahosting.com
         username: investic
         password: ${{ secrets.ftp_password }}
