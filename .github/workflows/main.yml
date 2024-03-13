@@ -14,3 +14,4 @@ jobs:
         server: s10.asurahosting.com
         username: investic
         password: ${{ secrets.ftp_password }}
+        server-dir: /domains/technocrats.dev/public_html/
