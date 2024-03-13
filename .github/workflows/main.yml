@@ -1,32 +1,8 @@
-name: CI/CD Pipeline
-
-on:
-  push:
-    branches: [ main ]
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v2
-
-    - name: Build the project
-      run: echo "Building the project..."
-
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-    if: github.ref == 'refs/heads/main'
-    steps:
-    - uses: actions/checkout@v2
-
-    - name: FTP Deploy
-      uses: SamKirkland/FTP-Deploy-Action@4.1.0
-      with:
-        ftp-server: ${{ secrets.FTP_SERVER }}
-        ftp-username: ${{ secrets.FTP_USERNAME }}
-        ftp-password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: ./your-build-directory/
-        server-dir: /domains/technocrats.dev/public_html/
-        git-ftp-args: --insecure
+- name: FTP Deploy
+  uses: SamKirkland/FTP-Deploy-Action@4.1.0
+  with:
+    server: ${{ secrets.FTP_SERVER }}
+    username: ${{ secrets.FTP_USERNAME }}
+    password: ${{ secrets.FTP_PASSWORD }}
+    local-dir: ./your-build-directory/
+    server-dir: /domains/technocrats.dev/public_html/
